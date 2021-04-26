@@ -69,5 +69,54 @@
       </form>
     </main>
   </section>
+
+  <script>
+    const d = document,
+      $form = d.querySelector(".free-trial-form")
+      console.log($form)
+      $form.addEventListener("keyup", ev => {
+        if (ev.target.matches("#f-name")) {
+          if (ev.target.value === "") {
+            d.querySelector(`#${ev.target.id} ~ .icon`).style.opacity = 1;
+            d.querySelector(`#${ev.target.id} ~ .error`).style.opacity = 1;
+          };
+          if (ev.target.value !== "") {
+            d.querySelector(`#${ev.target.id} ~ .icon`).style.opacity = 0;
+            d.querySelector(`#${ev.target.id} ~ .error`).style.opacity = 0;
+          }
+        };
+        if (ev.target.matches("#l-name")) {
+          if (ev.target.value === "") {
+            d.querySelector(`#${ev.target.id} ~ .icon`).style.opacity = 1;
+            d.querySelector(`#${ev.target.id} ~ .error`).style.opacity = 1;
+          };
+          if (ev.target.value !== "") {
+            d.querySelector(`#${ev.target.id} ~ .icon`).style.opacity = 0;
+            d.querySelector(`#${ev.target.id} ~ .error`).style.opacity = 0;
+          }
+        }
+        if (ev.target.matches("#email")) {
+          if (!ev.target.value.match(/\S+@\S+\.\S+/)) {
+            d.querySelector(`#${ev.target.id} ~ .icon`).style.opacity = 1;
+            d.querySelector(`#${ev.target.id} ~ .error`).style.opacity = 1;
+          };
+          if (ev.target.value.match(/\S+@\S+\.\S+/)) {
+            d.querySelector(`#${ev.target.id} ~ .icon`).style.opacity = 0;
+            d.querySelector(`#${ev.target.id} ~ .error`).style.opacity = 0;
+          }
+          
+        }
+        if (ev.target.matches("#password")) {
+          if (ev.target.value === "") {
+            d.querySelector(`#${ev.target.id} ~ .icon`).style.opacity = 1;
+            d.querySelector(`#${ev.target.id} ~ .error`).style.opacity = 1;
+          };
+          if (ev.target.value !== "") {
+            d.querySelector(`#${ev.target.id} ~ .icon`).style.opacity = 0;
+            d.querySelector(`#${ev.target.id} ~ .error`).style.opacity = 0;
+          }
+        }
+      })
+  </script>
 </body>
 </html>
