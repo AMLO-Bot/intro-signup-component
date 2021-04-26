@@ -11,7 +11,6 @@
   font-size: 62.5%;
   color: white;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,6 +21,7 @@ body {
   background-image: url(./images/bg-intro-mobile.png);
   background-color: var(--red);
 }
+
 /* layout */
 .header {
   grid-area: header;
@@ -32,7 +32,6 @@ body {
 }
 .wrapper {
   display: grid;
-  /* grid-template-rows: minmax(1fr) auto; */
   grid-template-areas:
     "header"
     "main";
@@ -101,6 +100,7 @@ body {
 .free-trial-form input:focus {
   border: 1px solid var(--dark-blue);
 }
+
 /* for icons and error messages */
 .free-trial-form .input-container .icon {
   position: absolute;
@@ -141,6 +141,7 @@ body {
   box-shadow: 0px 4px 0px 0px var(--green-o);
   cursor: pointer;
   transition: opacity 100ms ease-in-out;
+  outline: none;
 }
 .free-trial-form button[type=submit]:hover,
 .free-trial-form button[type=submit]:focus {
@@ -158,8 +159,43 @@ body {
   color: var(--red);
   font-weight: 700;
 }
+
 @media (min-width: 700px) {
   body {
     background-image: url(./images/bg-intro-desktop.png);
+  }
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+      "header main";
+    max-width: 1440px;
+   
+    padding: 7rem 2.5rem;
+    /* place-items: center; */
+    /* text-align: center; */
+  } 
+  .header {
+    text-align: left;
+    /* font-size: 3.5rem; */
+  }
+  .main {
+    margin-top: -5rem;
+    max-height: 565px;
+    width: 54rem;
+    max-width: 540px;
+  }
+
+  /* header */
+  .header .header__title {
+    font-size: 6.5rem;
+  }
+  .header .header__subtitle {
+    font-size: 2.5rem;
+  }
+  
+  /* main */
+  .main {
+    font-size: 1.5rem;
   }
 }
