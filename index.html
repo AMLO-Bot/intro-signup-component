@@ -29,42 +29,42 @@
       </div>
   
       <form action="/" class="free-trial-form">
-        <div class="input">
+        <div class="input-container">
           <input type="text" name="f-name" id="f-name" 
             autocomplete="given-name" required placeholder="First Name">
           <div class="icon--error"></div>
-          <img src="./images/icon-error.svg" alt="error in the First Name">
-          <p>First Name cannot be empty</p>
+          <img src="./images/icon-error.svg" class="icon" alt="error in the First Name">
+          <p class="error">First Name cannot be empty</p>
         </div>
   
-        <div class="input">
+        <div class="input-container">
           <input type="text" name="l-name" id="l-name" 
           autocomplete="family-name" required placeholder="Last Name">
           <div class="icon--error"></div>
-          <img src="./images/icon-error.svg" alt="error in the Last Name">
-          <p>Last Name cannot be empty</p>
+          <img src="./images/icon-error.svg" class="icon" alt="error in the Last Name">
+          <p class="error">Last Name cannot be empty</p>
         </div>
   
-        <div class="input">
+        <div class="input-container">
           <input type="email" name="email" id="email" 
           autocomplete="email" required placeholder="Email Address">
           <div class="icon--error"></div>
-          <img src="./images/icon-error.svg" alt="error in the Email Address">
-          <p>Looks like this is not an email</p>
+          <img src="./images/icon-error.svg" class="icon" alt="error in the Email Address">
+          <p class="error">Looks like this is not an email</p>
         </div>
   
-        <div class="input">
+        <div class="input-container">
           <input type="password" name="password" id="password" 
           autocomplete="current-password" required placeholder="Password">
           <div class="icon--error"></div>
-          <img src="./images/icon-error.svg" alt="error in the Password">
-          <p>Password cannot be empty</p>
+          <img src="./images/icon-error.svg" class="icon" alt="error in the Password">
+          <p class="error">Password cannot be empty</p>
         </div>
   
         <button type="submit" name="submit" id="submit">CLAIM YOUR FREE TRIAL</button>
 
         <div class="terms">
-          <p>By clicking the button, you are agreeing to our Terms and Services</p>
+          <p>By clicking the button, you are agreeing to our <span><a href="/">Terms and Services</a></span></p>
         </div>
       </form>
     </main>
